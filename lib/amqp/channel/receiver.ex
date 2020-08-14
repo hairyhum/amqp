@@ -147,7 +147,8 @@ defmodule AMQP.Channel.Receiver do
       type: type,
       user_id: user_id,
       app_id: app_id,
-      cluster_id: cluster_id
+      cluster_id: cluster_id,
+      deliver_timestamp: System.os_time(:millisecond)
     }})
 
     handlers
